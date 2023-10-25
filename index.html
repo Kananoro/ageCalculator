@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Age Calculator</title>
+</head>
+
+<body>
+   <div class="content">
+      <div class="wrapper">
+         <div class="calculator">
+            <div class="datebox">
+               <div class="datebox__day">
+                  <span>DAY</span>
+                  <input placeholder="DD" type="number" name="birthday" id="day">
+                  <p class="datebox__day--error"></p>
+               </div>
+               <div class="datebox__month">
+                  <span>MONTH</span>
+                  <input placeholder="MM" type="number" name="birthmonth" id="month">
+                  <p class="datebox__month--error"></p>
+               </div>
+               <div class="datebox__year">
+                  <span>YEAR</span>
+                  <input placeholder="YYYY" type="number" name="birthyear" id="year">
+                  <p class="datebox__year--error"></p>
+               </div>
+            </div>
+            <div class="calculator__calculate">
+               <button class="calculator__button"></button>
+            </div>
+
+            <div class="result">
+               <div class="result__year">
+                  <span class="result__year--span">--</span>
+                  years
+               </div>
+               <div class="result__month">
+                  <span class="result__month--span">--</span>
+                  months
+               </div>
+               <div class="result__day">
+                  <span class="result__day--span">--</span>
+                  days
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script src="js/script.js"></script>
+</body>
+
+</html>

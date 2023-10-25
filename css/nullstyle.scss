@@ -1,0 +1,52 @@
+//------------------------Null styles------------------------
+// Removing default padding, margin, and border for all elements 
+*{
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+// Ensuring consistent box sizing across elements and pseudo-elements
+*,*:before,*:after{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+// R emoving focus outlines for accessibility
+:focus,:active{outline: none;}
+a:focus.a:active{outline: none;}
+
+// Making sure HTML5 block elements are displayed as blocks
+nav,footer,header,aside{display: block;}
+
+//Setting default styles for html and body elements
+html,body{
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+// Ensuring form elements inherit the same font family as their parent
+input,button,textarea{font-family: inherit;}
+// Removing the 'clear' icon from Internet Explorer input fields
+input::-ms-clear{display: none;}
+// Setting pointer cursor for buttons
+button{cursor: pointer;}
+// Removing default focus style for buttons in Firefox
+button::-moz-focus-inner{padding: 0;border: 0;}
+// Removing text-decoration for anchor links and on hover
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+// Removing list styles for unordered lists
+ul li{list-style: none;}
+// Aligning images to the top by default
+img{vertical-align: top;}
+// Setting default font-size and weight for headers
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+//----------------------------------------------------------------
+

@@ -1,0 +1,321 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus.a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../font/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins Italic;
+  src: url("../font/Poppins-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: Poppins Bold;
+  src: url("../font/Poppins-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins Bold Italic;
+  src: url("../font/Poppins-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: Poppins ExtraBold;
+  src: url("../font/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins ExtraBold Italic;
+  src: url("../font/Poppins-ExtraBoldItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+body {
+  background: #F0F0F0;
+}
+
+.content {
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 90%;
+  position: relative;
+  max-width: 840px;
+  height: 487px;
+  background-color: #fff;
+  border-radius: 25px 25px 100px 25px;
+  padding-top: 48px;
+  gap: 28px;
+  padding: 25px;
+}
+.calculator__calculate {
+  text-align: center;
+  position: relative;
+}
+.calculator__calculate::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: black;
+  z-index: 0;
+}
+.calculator__line {
+  width: 1px;
+}
+.calculator__button {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  background-color: hsl(259, 100%, 65%);
+  background-image: url(../img/icon-arrow\ 1.png);
+  background-size: 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  transition-property: initial;
+  transition: background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.calculator__button img {
+  width: 32px;
+  height: 32px;
+}
+.calculator__button:hover {
+  transition: background-color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: #141414;
+}
+.calculator__button:active {
+  transition: background-color 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: #7c42fa;
+}
+
+.datebox {
+  max-width: 544px;
+  transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) color;
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  font-family: Poppins ExtraBold;
+  color: #6A6A6A;
+  letter-spacing: 2.76px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.datebox input {
+  transition: 1s border, 0.5s box-shadow;
+  font-size: 20px;
+  font-family: Poppins Bold;
+  padding: 16px;
+  border: 1px solid #C0C0C0;
+  border-radius: 7px;
+  height: 54px;
+  width: 100%;
+  max-width: 160px;
+}
+.datebox input:hover {
+  transition: 0.3s border;
+  border: 1px solid hsl(259, 100%, 65%);
+}
+.datebox input:focus {
+  transition: 0.5s box-shadow;
+  box-shadow: 5px 5px 15px rgba(20, 20, 20, 0.1843137255);
+}
+.datebox input::-moz-placeholder {
+  color: #7D7D7D;
+}
+.datebox input::placeholder {
+  color: #7D7D7D;
+}
+.datebox p {
+  color: hsl(0, 100%, 67%);
+  max-width: 160px;
+  text-wrap: nowrap;
+  padding: 5px;
+  font-family: Poppins italic;
+  letter-spacing: 0px;
+}
+.datebox__day {
+  display: flex;
+  flex-direction: column;
+}
+.datebox__month {
+  display: flex;
+  flex-direction: column;
+}
+.datebox__year {
+  display: flex;
+  flex-direction: column;
+}
+.datebox__error {
+  transition: 1s color, 1s border;
+  color: hsl(0, 100%, 67%);
+}
+.datebox__error input {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+.datebox__error input::-moz-placeholder {
+  -moz-transition: 1s color;
+  transition: 1s color;
+  color: hsl(0, 100%, 67%);
+}
+.datebox__error input::placeholder {
+  transition: 1s color;
+  color: hsl(0, 100%, 67%);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  color: #141414;
+  font-family: Poppins ExtraBold;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: normal;
+}
+.result span {
+  color: #874CFE;
+  font-family: Poppins ExtraBold;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: normal;
+}
+@media (min-width: 880px) {
+  .calculator {
+    height: 651px;
+    padding: 56px;
+    border-bottom-right-radius: 200px;
+  }
+  .calculator__calculate {
+    text-align: end;
+  }
+  .calculator__button {
+    margin: 0;
+    width: 91px;
+    height: 91px;
+  }
+  .datebox {
+    font-size: 14px;
+  }
+  .datebox input {
+    font-size: 32px;
+    height: 72px;
+    padding-left: 24px;
+  }
+  .result {
+    font-size: 100px;
+  }
+  .result__day {
+    height: 115px;
+  }
+  .result__month {
+    height: 115px;
+  }
+  .result__year {
+    height: 115px;
+  }
+  .result span {
+    font-size: 100px;
+  }
+}
